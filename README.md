@@ -1,5 +1,5 @@
 # SOPRC
-An implement of **Exploring the Algorithm-Dependent Generalization of AUPRC Optimization with List Stability**.
+An implement of the NeurIPS 2022 paper: [**Exploring the Algorithm-Dependent Generalization of AUPRC Optimization with List Stability**](https://arxiv.org/abs/2209.13262).
 
 ## Environments
 * **Ubuntu** 16.04
@@ -52,3 +52,14 @@ By default, these losses take a dict with keys "feat" and "target" as input.
 Here the feature is an $(N\times M) \times D$ tensor, where $N$ is the number of ids, $M$ is the number of positive examples for each id and $D$ is feature dimension.
 The target is an $(N\times M) \times 1$ tensor, where the first $M$ examples belong to the same id, and so on.
 See `config/demo.yaml` for more details on configures. For example, by setting $batchsize = 224, num\_sample\_per\_id = 4, output\_channels = 512$, we have $N = 56, M = 4, D = 512$, and the target could be $[2,2,2,2,1,1,1,1,4,4,4,4,...]$.
+
+## References
+If this code is helpful to you, please consider citing our paper:
+```
+@inproceedings{wen2022exploring,
+  title={Exploring the Algorithm-Dependent Generalization of AUPRC Optimization with List Stability},
+  author={Wen, Peisong and Xu, Qianqian and Yang, Zhiyong and He, Yuan and Huang, Qingming},
+  booktitle={Annual Conference on Neural Information Processing Systems},
+  year={2022}
+}
+```
